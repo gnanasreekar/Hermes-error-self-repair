@@ -1,0 +1,5 @@
+manifest_version: 1
+name: error-tracker
+version: 1.0.0
+requires_hermes: ">=0.21.5"
+description: "Local, read-only Hermes error and recovery activity viewer."

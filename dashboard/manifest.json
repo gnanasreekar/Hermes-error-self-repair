@@ -1,0 +1,8 @@
+{
+  "name": "error-tracker",
+  "label": "Error & Recovery Tracker",
+  "description": "Read-only view of recent Hermes errors and cron recovery events.",
+  "version": "1.0.0",
+  "tab": { "hidden": true },
+  "api": "plugin_api.py"
+}
