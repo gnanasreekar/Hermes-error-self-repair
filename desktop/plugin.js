@@ -107,19 +107,19 @@ export default {
   register(ctx) {
     const loadData = () => ctx.rest('/errors', { timeoutMs: 15000 })
 
-    ctx.registerMany([
-      {
-        id: 'error-tracker-page',
-        area: ROUTES_AREA,
-        data: { path: ROUTE },
-        render: () => jsx(ErrorTrackerPage, { loadData })
-      },
-      {
-        id: 'error-tracker-nav',
-        area: SIDEBAR_NAV_AREA,
-        order: 100,
-        data: { path: ROUTE, label: 'Error Tracker', codicon: 'bug' }
-      }
-    ])
+    ctx.register({
+      id: 'error-tracker-page',
+      area: ROUTES_AREA,
+      data: { path: ROUTE },
+      render: () => jsx(ErrorTrackerPage, { loadData })
+    })
+
+    ctx.register({
+      id: 'error-tracker-nav',
+      area: SIDEBAR_NAV_AREA,
+      order: 100,
+      data: { path: ROUTE, label: 'Error Tracker', codicon: 'bug' },
+      render: () => null
+    })
   }
 }
